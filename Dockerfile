@@ -4,7 +4,8 @@ FROM certbot/certbot:latest
 ENV domain=example.com
 
 # Update OS and add bash support
-RUN apk update && apk add bash
+RUN apk update && apk add bash \
+	&& mkdir /webroot/ && mkdir /webroot/letsencrypt/
 
 # Copy entrypoint and command scripts
 COPY ./command.sh /scripts/command.sh
