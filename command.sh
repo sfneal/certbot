@@ -12,4 +12,5 @@ certbot certonly --webroot \
     -d ${domain} \
     --rsa-key-size 4096 \
     --agree-tos \
+    --non-interactive \
     --force-renewal
