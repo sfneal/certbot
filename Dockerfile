@@ -5,7 +5,7 @@ ENV domain=example.com
 
 # Update OS and add bash support
 RUN apk update && apk add bash \
-	&& mkdir /webroot/ && mkdir /webroot/letsencrypt/
+	&& mkdir /webroot/ && mkdir /webroot/certbot/
 
 # Copy entrypoint and command scripts
 COPY ./command.sh /scripts/command.sh
