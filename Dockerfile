@@ -1,4 +1,4 @@
-FROM certbot/certbot:latest
+FROM certbot/certbot:v0.33.1
 
 # Domain environment variable
 ENV domain=example.com
