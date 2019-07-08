@@ -8,7 +8,7 @@ rm -Rf /etc/letsencrypt/live/${domain} \
 # Request Let's Encrypt certificate for ${domain}
 certbot certonly --webroot \
     -w /webroot/certbot \
-    --email stephen@hpadesign.com \
+    --email ${email} \
     -d ${domain} \
     --rsa-key-size 4096 \
     --agree-tos \

@@ -1,7 +1,10 @@
 FROM certbot/certbot:v0.33.1
 
-# Domain environment variable
+MAINTAINER=stephen@hpadesign.com
+
+# Domain & email environment variable 
 ENV domain=example.com
+ENV email=stephen@hpadesign.com 
 
 # Update OS and add bash support
 RUN apk update && apk add bash \
