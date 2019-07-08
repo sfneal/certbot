@@ -1,6 +1,6 @@
 FROM certbot/certbot:v0.33.1
 
-MAINTAINER=stephen@hpadesign.com
+MAINTAINER stephen@hpadesign.com
 
 # Domain & email environment variable 
 ENV domain=example.com
