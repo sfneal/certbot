@@ -31,4 +31,7 @@ certbot certonly --webroot \
 
 certbot certificates
 
+# Keep alive for 60 seconds
+sleep 60
+
 # TODO: Push SSL certs to AWS S3
