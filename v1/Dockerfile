@@ -5,6 +5,7 @@ MAINTAINER stephen@hpadesign.com
 # Domain & email environment variable 
 ENV domain=example.com
 ENV email=example@example.com
+ENV staging=0
 
 # Update OS and add bash support
 RUN apk update && apk add bash \

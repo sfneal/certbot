@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Check if staging is enabled via ENV vars
+if [ ${staging} -gt 0 ]
+then
+    staging_cmd="--staging"
+else
+    staging_cmd=""
+fi
+
 # Delete dummy certificate for ${domain}
 rm -Rf /etc/letsencrypt/live/${domain} \
     && rm -Rf /etc/letsencrypt/archive/${domain} \
@@ -15,6 +23,7 @@ certbot certonly --webroot \
     -w /webroot/certbot \
     --email ${email} \
     -d ${domain} \
+    ${staging_cmd} \
     --rsa-key-size 4096 \
     --agree-tos \
     --non-interactive \
