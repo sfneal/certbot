@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 # Check if staging is enabled via ENV vars
-if [ ${staging} -gt 0 ]
+if [[ ${staging} -ne 0 ]];
 then
-    staging_cmd="--staging"
-else
+    echo "Production environment enabled... certbot is NOT using '--staging' flag."
     staging_cmd=""
+else
+    echo "Staging environment enabled... certbot is using '--staging' flag."
+    staging_cmd="--staging"
 fi
 
 # Delete dummy certificate for ${domain}
