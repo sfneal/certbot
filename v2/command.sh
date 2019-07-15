@@ -31,8 +31,7 @@ certbot certonly --webroot \
     ${staging_cmd} \
     --rsa-key-size 4096 \
     --agree-tos \
-    --non-interactive \
-    --force-renewal
+    --non-interactive
 
 certbot certificates
 
