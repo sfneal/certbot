@@ -7,10 +7,17 @@ ENV domain=example.com
 ENV email=example@example.com
 ENV staging=0
 
+# Make ACME challenge root
+RUN mkdir /webroot/ && mkdir /webroot/certbot/
+
 # Update OS and add bash support
-RUN apk update && apk add bash \
-    && mkdir /webroot/ \
-	&& mkdir /webroot/certbot/
+RUN apk update && apk add \
+    bash \
+    python3
+
+# Copy script files & install Python dependencies
+COPY ./sites-scripts/ /sites-scripts/
+RUN pip3 install --upgrade pip && pip3 install dirutility
 
 # Copy entrypoint and command scripts
 COPY ./command.sh /scripts/command.sh
