@@ -10,6 +10,9 @@ else
     staging_cmd=""
 fi
 
+# Give the webserver 10 seconds to startup/run commands
+sleep 10;
+
 # Delete dummy certificate for ${domain}
 rm -Rf /etc/letsencrypt/live/${domain} \
     && rm -Rf /etc/letsencrypt/archive/${domain} \
