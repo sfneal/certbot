@@ -13,7 +13,8 @@ else
     staging_cmd=""
 fi
 
-# Run certbot script for each domain
+# Remove dummy cert directories and pack domains list into arg for certbot cli
+# Execute certbot command
 python3 /sites-scripts/certbot.py --domains "${domain}"
 
 # Display certificates
