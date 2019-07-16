@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Give the webserver 10 seconds to startup/run commands
-sleep 10;
+# Give the webserver 20 seconds to startup/run commands
+sleep 20;
 
 # Check if staging is enabled via ENV vars
 if [[ ${staging} -ne 0 ]];
