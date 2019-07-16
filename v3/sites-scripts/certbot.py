@@ -2,8 +2,6 @@ import os
 import shutil
 from argparse import ArgumentParser
 
-from dirutility import SystemCommand
-
 
 def letsencrypt_cert_cleaner(domain, root='/etc/letsencrypt/', paths=('live', 'archive', 'renewal')):
     """Remove Letsencrypt directories that contain dummy certs and .conf's."""
@@ -55,7 +53,7 @@ def main():
 
     # Execute certbot command
     print("### Requesting Let's Encrypt certificate for {0} ...".format(' '.join(args['domains'])))
-    SystemCommand('domain_args="{0}" sh /sites-scripts/certify.sh'.format(domain_args(args['domains'])))
+    os.system('domain_args="{0}" sh /sites-scripts/certify.sh'.format(domain_args(args['domains'])))
 
 
 if __name__ == '__main__':
