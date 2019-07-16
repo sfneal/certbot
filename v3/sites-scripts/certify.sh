@@ -11,5 +11,6 @@ certbot certonly --webroot \
     --email ${email} \
     ${staging_cmd} \
     --rsa-key-size 4096 \
+    --keep-until-expiring \
     --agree-tos \
     --non-interactive
