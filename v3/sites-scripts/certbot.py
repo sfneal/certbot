@@ -35,6 +35,10 @@ def main():
 
     # Run certify.sh for each domain
     for domain in args['domains']:
+        # Clean directories
+        letsencrypt_cert_cleaner(domain)
+
+        # Execute certbot command
         SystemCommand('domain={0} sh /sites-scripts/certify.sh'.format(domain))
 
 
