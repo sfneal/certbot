@@ -48,8 +48,8 @@ def main():
     args['domains'] = args['domains'].split(' ')
 
     # Clean directories for each domain
-    for domain in args['domains']:
-        letsencrypt_cert_cleaner(domain)
+    # for domain in args['domains']:
+    #     letsencrypt_cert_cleaner(domain)
 
     # Execute certbot command
     print("### Requesting Let's Encrypt certificate for {0} ...".format(' '.join(args['domains'])))
