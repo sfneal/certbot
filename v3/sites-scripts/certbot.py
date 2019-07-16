@@ -1,4 +1,5 @@
 import os
+import shutil
 from argparse import ArgumentParser
 
 from dirutility import SystemCommand
@@ -10,16 +11,26 @@ def letsencrypt_cert_cleaner(domain, root='/etc/letsencrypt/', paths=('live', 'a
     for path in (os.path.join(root, p) for p in paths):
         # Renewal conf's
         if path.endswith('renewal'):
-            os.remove(os.path.join(path, domain + '.conf'))
+            removal = os.path.join(path, domain + '.conf')
 
         # Live & archive certs
         else:
-            os.remove(os.path.join(path, domain))
+            removal = os.path.join(path, domain)
+
+        # Delete file/directory
+        status = 'Success'
+        try:
+            os.remove(removal)
+        except IsADirectoryError:
+            shutil.rmtree(removal)
+        except FileNotFoundError:
+            status = 'Skipped' if not os.path.exists(removal) else 'Error'
+        print('{0} deleting: {1}'.format(status, removal))
 
 
 def domain_args(domains):
     """Return a string of domain arguments to pass to certbot."""
-    return ' '.join(['-d {0}'.format(domain) for domain in domains])
+    return ' ' + ' '.join(['-d {0}'.format(domain) for domain in domains])
 
 
 def main():
@@ -44,7 +55,7 @@ def main():
 
     # Execute certbot command
     print("### Requesting Let's Encrypt certificate for {0} ...".format(' '.join(args['domains'])))
-    SystemCommand('domain_args={0} sh /sites-scripts/certify.sh'.format(domain_args(args['domains'])))
+    SystemCommand('domain_args="{0}" sh /sites-scripts/certify.sh'.format(domain_args(args['domains'])))
 
 
 if __name__ == '__main__':
