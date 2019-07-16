@@ -4,6 +4,19 @@ from argparse import ArgumentParser
 from dirutility import SystemCommand
 
 
+def letsencrypt_cert_cleaner(domain, root='/etc/letsencrypt/', paths=('live', 'archive', 'renewal')):
+    """Remove Letsencrypt directories that contain dummy certs and .conf's."""
+    domain = domain.strip()
+    for path in (os.path.join(root, p) for p in paths):
+        # Renewal conf's
+        if path.endswith('renewal'):
+            os.remove(os.path.join(path, domain + '.conf'))
+
+        # Live & archive certs
+        else:
+            os.remove(os.path.join(path, domain))
+
+
 def main():
     # Declare argparse argument descriptions
     usage = 'AWS S3 command-line-interface wrapper.'
