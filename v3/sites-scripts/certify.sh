@@ -4,7 +4,7 @@
 certbot certonly --webroot \
     -w /webroot/certbot \
     --email ${email} \
-    -d ${domain} \
+    ${domain_args} \
     ${staging_cmd} \
     --rsa-key-size 4096 \
     --agree-tos \
