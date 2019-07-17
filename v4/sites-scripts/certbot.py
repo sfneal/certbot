@@ -27,11 +27,6 @@ def letsencrypt_cert_cleaner(domain, root='/etc/letsencrypt/', paths=('live', 'a
         print('{0} deleting: {1}'.format(status, removal))
 
 
-def domain_args(domains):
-    """Return a string of domain arguments to pass to certbot."""
-    return ' ' + ' '.join(['-d {0}'.format(domain) for domain in domains])
-
-
 def main():
     # Declare argparse argument descriptions
     usage = 'AWS S3 command-line-interface wrapper.'
@@ -55,7 +50,6 @@ def main():
     args['domains'] = args['domains'].split(' ')
 
     # Send request to validation server
-    print("### Requesting Let's Encrypt certificate for {0} ...".format(' '.join(args['domains'])))
     response = get('http://' + args['validation_domain'] + '/cert', data={'domain': args['domains'],
                                                                           'email': args['email'],
                                                                           'staging': args['staging']})

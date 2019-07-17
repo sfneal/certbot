@@ -12,6 +12,8 @@ else
 fi
 
 # Execute certbot command
+echo "### Requesting Let's Encrypt certificate for ${domain} ..."
+echo "### Using validation domain ${validation_domain}"
 python3 /sites-scripts/certbot.py \
     --domains "${domain}" \
     --email "${email}" \
