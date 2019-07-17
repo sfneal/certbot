@@ -16,7 +16,8 @@ RUN apk update && apk add \
     python3
 
 # Copy script files & install Python dependencies
-RUN pip3 install --upgrade pip && pip3 install dirutility
+COPY ./sites-scripts/requirements.txt /sites-scripts/requirements.txt
+RUN pip3 install --upgrade pip && pip3 install -r /sites-scripts/requirements.txt
 COPY ./sites-scripts/ /sites-scripts/
 
 # Copy entrypoint and command scripts
