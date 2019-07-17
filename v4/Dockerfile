@@ -4,6 +4,7 @@ MAINTAINER stephen@hpadesign.com
 
 # Domain & email environment variable 
 ENV domain=example.com
+ENV validation_domain=validation.example.com
 ENV email=example@example.com
 ENV staging=0
 

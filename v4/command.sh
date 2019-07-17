@@ -7,15 +7,16 @@ sleep 20;
 if [[ ${staging} -ne 0 ]];
 then
     echo "Staging environment enabled... certbot is using '--staging' flag."
-    staging_cmd="--staging --dry-run"
 else
     echo "Production environment enabled... certbot is NOT using '--staging' flag."
-    staging_cmd=""
 fi
 
-# Remove dummy cert directories and pack domains list into arg for certbot cli
 # Execute certbot command
-python3 /sites-scripts/certbot.py --domains "${domain}"
+python3 /sites-scripts/certbot.py \
+    --domains "${domain}" \
+    --email "${email}" \
+    --staging "${staging}" \
+    --validation-domain "${validation_domain}"
 
 # Display certificates
 certbot certificates

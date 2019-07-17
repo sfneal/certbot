@@ -1,6 +1,7 @@
 import os
 import shutil
 from argparse import ArgumentParser
+from requests import get
 
 
 def letsencrypt_cert_cleaner(domain, root='/etc/letsencrypt/', paths=('live', 'archive', 'renewal')):
@@ -37,23 +38,28 @@ def main():
     description = 'Execute AWS S3 commands.'
     helpers = {
         'domain': "List of domain names separated by spaces.",
+        'email': "Letsencrypt account email address.",
+        'staging': "Enable/disable staging environment for dev configs.",
+        'validation-domain': "SSL validation server domain.",
     }
 
     # construct the argument parse and parse the arguments
     parser = ArgumentParser(usage=usage, description=description)
     parser.add_argument('--domains', help=helpers['domain'], type=str)
+    parser.add_argument('--email', help=helpers['email'], type=str)
+    parser.add_argument('--staging', help=helpers['staging'], type=int, default=1)
+    parser.add_argument('--validation-domain', help=helpers['validation-domain'], type=str)
 
     # Parse Arguments
     args = vars(parser.parse_args())
     args['domains'] = args['domains'].split(' ')
 
-    # Clean directories for each domain
-    # for domain in args['domains']:
-    #     letsencrypt_cert_cleaner(domain)
-
-    # Execute certbot command
+    # Send request to validation server
     print("### Requesting Let's Encrypt certificate for {0} ...".format(' '.join(args['domains'])))
-    os.system('domain_args="{0}" sh /sites-scripts/certify.sh'.format(domain_args(args['domains'])))
+    response = get('http://' + args['validation_domain'] + '/cert', data={'domain': args['domains'],
+                                                                          'email': args['email'],
+                                                                          'staging': args['staging']})
+    print(response.json()['output'])
 
 
 if __name__ == '__main__':
