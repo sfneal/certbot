@@ -51,11 +51,11 @@ def main():
 
     # Send request to validation server
     for domain in args['domains']:
-        print('### Sending cert request for domain {} to the validation server...')
+        print('### Sending cert request for domain {} to the validation server...'.format(domain))
         response = get('http://' + args['validation_domain'] + '/cert', data={'domain': domain,
                                                                               'email': args['email'],
                                                                               'staging': args['staging']})
-        print('### Received response to cert request for domain {} from the validation server...')
+        print('### Received response to cert request for domain {} from the validation server...'.format(domain))
         print(response.json()['output'])
 
 

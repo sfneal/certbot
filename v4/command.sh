@@ -11,6 +11,10 @@ else
     echo "Production environment enabled... certbot is NOT using '--staging' flag."
 fi
 
+# Display certificates
+echo "### Existing SSL certificates ..."
+certbot certificates
+
 # Execute certbot command
 echo "### Requesting Let's Encrypt certificate for ${domain} ..."
 echo "### Using validation domain ${validation_domain}"
