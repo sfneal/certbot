@@ -50,10 +50,13 @@ def main():
     args['domains'] = args['domains'].split(' ')
 
     # Send request to validation server
-    response = get('http://' + args['validation_domain'] + '/cert', data={'domain': args['domains'],
-                                                                          'email': args['email'],
-                                                                          'staging': args['staging']})
-    print(response.json()['output'])
+    for domain in args['domains']:
+        print('### Sending cert request for domain {} to the validation server...')
+        response = get('http://' + args['validation_domain'] + '/cert', data={'domain': domain,
+                                                                              'email': args['email'],
+                                                                              'staging': args['staging']})
+        print('### Received response to cert request for domain {} from the validation server...')
+        print(response.json()['output'])
 
 
 if __name__ == '__main__':
