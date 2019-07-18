@@ -25,6 +25,7 @@ python3 /sites-scripts/certbot.py \
     --validation-domain "${validation_domain}"
 
 # Display certificates
+echo "### Updated SSL certificates ..."
 certbot certificates
 
 # Keep alive for 60 seconds
