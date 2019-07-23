@@ -8,9 +8,6 @@ ENV validation_domain=validation.example.com
 ENV email=example@example.com
 ENV staging=0
 
-# Make ACME challenge root
-RUN mkdir /webroot/ && mkdir /webroot/certbot/
-
 # Update OS and add bash support
 RUN apk update && apk add \
     bash \
