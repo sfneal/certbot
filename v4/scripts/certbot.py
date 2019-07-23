@@ -60,8 +60,8 @@ def main():
         response = get('http://' + args['validation_domain'] + '/cert', data={'domain': domain,
                                                                               'email': args['email'],
                                                                               'staging': args['staging']})
-        print('### Received response to cert request for domain {} from the validation server...'.format(domain))
         print('\n'.join(response.json()['output']))
+        print('### Received response to cert request for domain {} from the validation server...'.format(domain))
     print(console_sep())
 
 
