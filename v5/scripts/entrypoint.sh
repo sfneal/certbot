@@ -27,6 +27,3 @@ sleep 30
 # Display certificates
 echo "### Updated SSL certificates ..."
 certbot certificates
-
-# Keep alive for 60 seconds
-sleep 60
