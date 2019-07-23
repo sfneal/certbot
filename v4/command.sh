@@ -18,7 +18,7 @@ certbot certificates
 # Execute certbot command
 echo "### Requesting Let's Encrypt certificate for ${domain} ..."
 echo "### Using validation domain ${validation_domain}"
-python3 /sites-scripts/certbot.py \
+python3 /scripts/certbot.py \
     --domains "${domain}" \
     --email "${email}" \
     --staging "${staging}" \

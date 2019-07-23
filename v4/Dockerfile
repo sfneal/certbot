@@ -17,9 +17,8 @@ RUN apk update && apk add \
     python3
 
 # Copy script files & install Python dependencies
-COPY ./sites-scripts/requirements.txt /sites-scripts/requirements.txt
-RUN pip3 install --upgrade pip && pip3 install -r /sites-scripts/requirements.txt
-COPY ./sites-scripts/ /sites-scripts/
+COPY /scripts/ /scripts/
+RUN pip3 install --upgrade pip && pip3 install -r /scripts/requirements.txt
 
 # Copy entrypoint and command scripts
 COPY ./command.sh /scripts/command.sh
