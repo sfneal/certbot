@@ -4,6 +4,11 @@ from argparse import ArgumentParser
 from requests import get
 
 
+def console_sep(char='- ', length=40):
+    """Return a separator line to the console output."""
+    return ''.join([char * length])
+
+
 def letsencrypt_cert_cleaner(domain, root='/etc/letsencrypt/', paths=('live', 'archive', 'renewal')):
     """Remove Letsencrypt directories that contain dummy certs and .conf's."""
     domain = domain.strip()
@@ -57,6 +62,7 @@ def main():
                                                                               'staging': args['staging']})
         print('### Received response to cert request for domain {} from the validation server...'.format(domain))
         print('\n'.join(response.json()['output']))
+    print(console_sep())
 
 
 if __name__ == '__main__':
