@@ -21,9 +21,6 @@ python3 /scripts/certbot.py \
     --staging "${staging}" \
     --validation-domain "${validation_domain}"
 
-# Wait for Dind container to pull certs from validation server and restart nginx
-sleep 30
-
 # Display certificates
 echo "### Updated SSL certificates ..."
 certbot certificates
