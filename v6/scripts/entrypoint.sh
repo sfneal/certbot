@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+domain=$(ls ${certs_dir})
+
 # Check if staging is enabled via ENV vars
 if [[ ${staging} -ne 0 ]];
 then
@@ -24,3 +26,5 @@ python3 /scripts/certbot.py \
 # Display certificates
 echo "### Updated SSL certificates ..."
 certbot certificates
+
+sleep 120
