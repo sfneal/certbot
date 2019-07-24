@@ -2,6 +2,10 @@ import os
 import shutil
 from argparse import ArgumentParser
 from requests import get
+from dirutility import TextDump
+
+
+DOMAINS_FILE = '/etc/letsencrypt/domains.txt'
 
 
 def console_sep(char='- ', length=40):
@@ -45,14 +49,16 @@ def main():
 
     # construct the argument parse and parse the arguments
     parser = ArgumentParser(usage=usage, description=description)
-    parser.add_argument('--domains', help=helpers['domain'], type=str)
+    parser.add_argument('--domains', help=helpers['domain'],
+                        default=TextDump(DOMAINS_FILE).read().splitlines())
     parser.add_argument('--email', help=helpers['email'], type=str)
     parser.add_argument('--staging', help=helpers['staging'], type=int, default=1)
     parser.add_argument('--validation-domain', help=helpers['validation-domain'], type=str)
 
     # Parse Arguments
     args = vars(parser.parse_args())
-    args['domains'] = args['domains'].split(' ')
+    if isinstance(args['domains'], str):
+        args['domains'] = args['domains'].strip().split(' ')
 
     # Send request to validation server
     for domain in args['domains']:
