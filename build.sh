@@ -5,3 +5,4 @@ docker build -t stephenneal/certbot-nginx:v2 ./v2/
 docker build -t stephenneal/certbot-nginx:v3 ./v3/
 docker build -t stephenneal/certbot-nginx:v4 ./v4/
 docker build -t stephenneal/certbot-nginx:v5 ./v5/
+docker build -t stephenneal/certbot-nginx:v6 ./v6/
