@@ -62,7 +62,6 @@ def main():
                                                                               'staging': args['staging']})
         print('\n'.join(response.json()['output']))
         print('### Received response to cert request for domain {} from the validation server...'.format(domain))
-    print(console_sep())
 
 
 if __name__ == '__main__':
