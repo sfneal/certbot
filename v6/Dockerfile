@@ -13,11 +13,13 @@ RUN apk update && apk add \
     bash \
     python3
 
-# Copy script files
-COPY /scripts/ /scripts/
 
 # Install Python dependencies
-RUN pip3 install --upgrade pip && pip3 install -r /scripts/requirements.txt
+COPY ./requirements.txt ./requirements.txt
+RUN pip3 install --upgrade pip && pip3 install -r ./requirements.txt && rm ./requirements.txt
+
+# Copy script files
+COPY /scripts/ /scripts/
 
 ENTRYPOINT ["bash"]
 CMD ["/scripts/entrypoint.sh"]
