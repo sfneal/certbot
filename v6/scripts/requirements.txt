@@ -1,6 +1,6 @@
 certifi==2019.6.16
 chardet==3.0.4
-dirutility==0.7.3
+dirutility>=0.7.4
 idna==2.8
 looptools==1.2.3
 requests==2.22.0
