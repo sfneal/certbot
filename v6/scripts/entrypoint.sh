@@ -14,6 +14,15 @@ fi
 # Execute certbot command
 echo "### Requesting Let's Encrypt certificate for ${domain} ..."
 echo "### Using validation domain ${validation_domain}"
+
+domains_txt='/etc/letsencrypt/domains.txt'
+sleep 3
+until [[ -f ${domains_txt} ]]
+do
+    echo "Domains list file NOT found " ${domains_txt}
+    sleep 3
+done
+echo "File found " ${domains_txt}
 python3 /scripts/certbot.py \
     --email "${email}" \
     --staging "${staging}" \
