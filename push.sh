@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-sh ./build.sh
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+sh "${DIR}"/build.sh
 
 docker push stephenneal/certbot-nginx:v1
 docker push stephenneal/certbot-nginx:v2
