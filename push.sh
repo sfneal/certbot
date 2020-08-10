@@ -11,3 +11,4 @@ docker push stephenneal/certbot-nginx:v4
 docker push stephenneal/certbot-nginx:v5
 docker push stephenneal/certbot-nginx:v6
 docker push stephenneal/certbot-nginx:v7
+docker push stephenneal/certbot-nginx:v8

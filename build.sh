@@ -9,3 +9,4 @@ docker build -t stephenneal/certbot-nginx:v4 "${DIR}"/v4/
 docker build -t stephenneal/certbot-nginx:v5 "${DIR}"/v5/
 docker build -t stephenneal/certbot-nginx:v6 "${DIR}"/v6/
 docker build -t stephenneal/certbot-nginx:v7 "${DIR}"/v7/
+docker build -t stephenneal/certbot-nginx:v8 "${DIR}"/v8/
