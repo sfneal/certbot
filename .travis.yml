@@ -3,8 +3,22 @@ language: ruby
 services:
   - docker
 
+env:
+  matrix:
+    - TAG=v1
+    - TAG=v2
+    - TAG=v3
+    - TAG=v4
+    - TAG=v5
+    - TAG=v6
+    - TAG=v7
+    - TAG=v8
+
+before_script:
+  - DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 script:
-  - sh build.sh
+  - docker build -t stephenneal/certbot-nginx:${TAG} "${DIR}/${TAG}/"
 
 after_script:
   - docker images
