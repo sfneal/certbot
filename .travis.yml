@@ -15,8 +15,7 @@ env:
     - TAG=v8
 
 script:
-  - ls
-  - docker build -t stephenneal/certbot-nginx:${TAG} /"${TAG}"/
+  - sh build.sh ${TAG}
 
 after_script:
   - docker images
