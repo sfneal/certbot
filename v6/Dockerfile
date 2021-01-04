@@ -1,6 +1,6 @@
 FROM certbot/certbot:v0.38.0
 
-MAINTAINER stephen@hpadesign.com
+MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Domain & email environment variable
 ENV certs_dir=/etc/letsencrypt/live
