@@ -6,7 +6,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 # Optional TAG argument (if set, only the specified image will be built)
 TAG=${1:-null}
 
-
 # Check if the TAG variable is set
 if [ -z "$TAG" ]
 
