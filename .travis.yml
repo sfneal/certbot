@@ -14,15 +14,9 @@ env:
     - TAG=v7
     - TAG=v8
 
-before_script:
-  - DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-  - echo ${DIR}
-
 script:
-  - echo "${DIR}"/"${TAG}/"
-  - echo "${DIR}/${TAG}/"
-  - ls ${DIR}
-  - docker build -t stephenneal/certbot-nginx:${TAG} "${DIR}"/"${TAG}/"
+  - echo "${TAG}/"
+  - docker build -t stephenneal/certbot-nginx:${TAG} /"${TAG}"/
 
 after_script:
   - docker images
