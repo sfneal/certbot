@@ -7,7 +7,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 TAG=${1:-null}
 
 # Check if the TAG variable is set
-if [ -z "$TAG" ]
+[ "$TAG" != null ]
 
   # Only build one image
   then
