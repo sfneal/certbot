@@ -13,7 +13,6 @@ ENV staging=0
 
 # Update OS and add bash support
 RUN apk update && apk add \
-    bash \
     python3
 
 # Install Python dependencies
@@ -25,5 +24,5 @@ RUN pip3 install --upgrade pip \
 # Copy script files
 COPY /scripts/ /scripts/
 
-ENTRYPOINT ["bash"]
+ENTRYPOINT ["sh"]
 CMD ["/scripts/entrypoint.sh"]
