@@ -1,4 +1,8 @@
-FROM certbot/certbot:v1.7.0
+# Base PHP image tags
+ARG certbot_tag=v1.9.0
+
+# Build from base certbot/certbot image
+FROM certbot/certbot:${certbot_tag}
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Domain & email environment variable

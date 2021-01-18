@@ -1,8 +1,8 @@
-certifi==2019.6.16
-chardet==3.0.4
+certifi>=2019.6.16
+chardet>=3.0.4
 dirutility>=0.7.17
-idna==2.8
-looptools==1.2.3
-requests==2.22.0
-tqdm==4.32.2
-urllib3==1.25.3
+idna>=2.8
+looptools>=1.2.3
+requests>=2.22.0
+tqdm>=4.32.2
+urllib3>=1.25.3
