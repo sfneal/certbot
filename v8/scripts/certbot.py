@@ -1,9 +1,9 @@
 import os
 import shutil
 from argparse import ArgumentParser
-from requests import get
-from dirutility import TextDump
 
+from dirutility import TextDump
+from requests import get
 
 DOMAINS_FILE = '/etc/letsencrypt/domains.txt'
 
@@ -38,8 +38,8 @@ def letsencrypt_cert_cleaner(domain, root='/etc/letsencrypt/', paths=('live', 'a
 
 def main():
     # Declare argparse argument descriptions
-    usage = 'AWS S3 command-line-interface wrapper.'
-    description = 'Execute AWS S3 commands.'
+    usage = 'certbox-nginx Certificate Manager.'
+    description = 'Manage Lets Encrypt SSL certificates.'
     helpers = {
         'domain': "List of domain names separated by spaces.",
         'email': "Letsencrypt account email address.",
