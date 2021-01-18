@@ -1,6 +1,6 @@
 # stephenneal/certbot
 
-[![Build Status](https://img.shields.io/travis/sfneal/actions/master.svg?style=flat-square)](https://travis-ci.org/sfneal/certbot)
+[![Build Status](https://img.shields.io/travis/sfneal/certbot/master.svg?style=flat-square)](https://travis-ci.org/sfneal/certbot)
 [![Total Downloads](https://img.shields.io/docker/pulls/stephenneal/certbot?style=flat-square)](https://hub.docker.com/r/stephenneal/certbot)
 [![Latest Version](https://img.shields.io/docker/v/stephenneal/certbot?style=flat-square)](https://hub.docker.com/r/stephenneal/certbot)
 
