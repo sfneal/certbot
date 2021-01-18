@@ -38,7 +38,7 @@ def letsencrypt_cert_cleaner(domain, root='/etc/letsencrypt/', paths=('live', 'a
 
 def main():
     # Declare argparse argument descriptions
-    usage = 'certbox-nginx Certificate Manager.'
+    usage = 'certbot-nginx Certificate Manager.'
     description = 'Manage Lets Encrypt SSL certificates.'
     helpers = {
         'domain': "List of domain names separated by spaces.",
