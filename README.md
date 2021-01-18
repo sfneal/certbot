@@ -1,11 +1,18 @@
-# certbot
+# stephenneal/certbot
 
 [![Build Status](https://img.shields.io/travis/sfneal/actions/master.svg?style=flat-square)](https://travis-ci.org/sfneal/certbot)
 [![Total Downloads](https://img.shields.io/docker/pulls/stephenneal/certbot?style=flat-square)](https://hub.docker.com/r/stephenneal/certbot)
 [![Latest Version](https://img.shields.io/docker/v/stephenneal/certbot?style=flat-square)](https://hub.docker.com/r/stephenneal/certbot)
 
-
 Certbot Docker image for managing Lets Encrypt SSL certificates.  Requests & validates certificates from a validation server (configured with environment vars) that can be shared with webserver containers through Docker volumes.
+
+## Installation
+
+Docker images can be pulled using the Docker CLI.
+
+```bash
+docker pull stephenneal/certbot:v9
+```
 
 ## Usage
 
@@ -13,7 +20,7 @@ Add a 'certbot' container with a certs volume that is shared with your webserver
 
 ```yaml
 certbot:
-  image: stephenneal/certbot:v8
+  image: stephenneal/certbot:v9
   container_name: certbot
   volumes:
     - certs:/etc/letsencrypt
