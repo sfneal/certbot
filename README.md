@@ -12,17 +12,17 @@ Add a 'certbot' container with a certificates volume that is shared with your we
 
 ```yaml
 certbot:
-	image: stephenneal/certbot-nginx:v8
-	container_name: certbot
-	volumes:
-	  - certs:/etc/letsencrypt
-	environment:
-	  - validation_domain=validation.example.com
-	  - email=user@example.com
-	  - staging=1 # use '1' for development environments
-	depends_on:
-	  - webserver
-	restart: "no"
+  image: stephenneal/certbot-nginx:v8
+  container_name: certbot
+  volumes:
+    - certs:/etc/letsencrypt
+  environment:
+    - validation_domain=validation.example.com
+    - email=user@example.com
+    - staging=1 # use '1' for development environments
+  depends_on:
+    - webserver
+  restart: "no"
 ```
 
 When used in conjunction with stephenneal/nginx-* containers all of the domains being used by the webserver's will be written to a text file ('/etc/letsencrypt/domains.txt') that is parsed by the certbot to determine what domains to request certificates for.
