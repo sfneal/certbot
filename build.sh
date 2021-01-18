@@ -11,17 +11,17 @@ if [ "$TAG" != null ]
 
   # Only build one image
   then
-    docker build -t stephenneal/certbot-nginx:"${TAG}" "${DIR}"/"${TAG}"/
+    docker build -t stephenneal/certbot:"${TAG}" "${DIR}"/"${TAG}"/
 
   # Build all images
   else
-    docker build -t stephenneal/certbot-nginx:v1 "${DIR}"/v1/
-    docker build -t stephenneal/certbot-nginx:v2 "${DIR}"/v2/
-    docker build -t stephenneal/certbot-nginx:v3 "${DIR}"/v3/
-    docker build -t stephenneal/certbot-nginx:v4 "${DIR}"/v4/
-    docker build -t stephenneal/certbot-nginx:v5 "${DIR}"/v5/
-    docker build -t stephenneal/certbot-nginx:v6 "${DIR}"/v6/
-    docker build -t stephenneal/certbot-nginx:v7 "${DIR}"/v7/
-    docker build -t stephenneal/certbot-nginx:v8 "${DIR}"/v8/
-    docker build -t stephenneal/certbot-nginx:v9 "${DIR}"/v9/
+    docker build -t stephenneal/certbot:v1 "${DIR}"/v1/
+    docker build -t stephenneal/certbot:v2 "${DIR}"/v2/
+    docker build -t stephenneal/certbot:v3 "${DIR}"/v3/
+    docker build -t stephenneal/certbot:v4 "${DIR}"/v4/
+    docker build -t stephenneal/certbot:v5 "${DIR}"/v5/
+    docker build -t stephenneal/certbot:v6 "${DIR}"/v6/
+    docker build -t stephenneal/certbot:v7 "${DIR}"/v7/
+    docker build -t stephenneal/certbot:v8 "${DIR}"/v8/
+    docker build -t stephenneal/certbot:v9 "${DIR}"/v9/
 fi
