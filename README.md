@@ -11,7 +11,6 @@ Certbot Docker image for managing Lets Encrypt SSL certificates.  Requests & val
 Add a 'certbot' container with a certificates volume that is shared with your webserver(s) to your docker-compose.yml.  
 
 ```yaml
-# Certification Bot
 certbot:
 	image: stephenneal/certbot-nginx:v8
 	container_name: certbot
