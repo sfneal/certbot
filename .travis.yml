@@ -22,7 +22,13 @@ before_script:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
 
 script:
-  - sh build.sh ${TAG}
+  - sh build.sh "${TAG}"
 
 after_script:
   - docker images
+
+deploy:
+  provider: script
+  script: sh push.sh "${TAG}"
+  on:
+    tags: true
