@@ -3,6 +3,6 @@ chardet==3.0.4
 dirutility==0.7.3
 idna==2.8
 looptools==1.2.3
-requests==2.22.0
+requests>=2.22.0
 tqdm==4.32.2
-urllib3==1.26.5
+urllib3>=1.26.5
