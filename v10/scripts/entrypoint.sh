@@ -23,10 +23,14 @@ do
     sleep 3
 done
 echo "File found " ${domains_txt}
-python3 /scripts/certbot.py \
-    --email "${email}" \
-    --staging "${staging}" \
-    --validation-domain "${validation_domain}"
+
+# Run cerbot for each validation domain
+for vd in ${validation_domain}; do
+    python3 /scripts/certbot.py \
+        --email "${email}" \
+        --staging "${staging}" \
+        --validation-domain "${vd}"
+done
 
 # Display certificates
 echo "### Existing SSL certificates ..."
