@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 from dirutility import TextDump
 from requests import get
 
+
 DOMAINS_FILE = '/etc/letsencrypt/domains.txt'
 
 
@@ -66,7 +67,7 @@ def main():
         response = get('http://' + args['validation_domain'] + '/cert', data={'domain': domain,
                                                                               'email': args['email'],
                                                                               'staging': args['staging']})
-        print('\n'.join(response.json()['output']))
+        print('\n' + response.text)
         print('### Received response to cert request for domain {} from the validation server...'.format(domain))
 
 
