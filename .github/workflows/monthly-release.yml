@@ -1,7 +1,9 @@
 name: Monthly Automated Release
 
 
-on: [push]
+on:
+  schedule:
+    - cron: '0 3 2 * *'
 
 jobs:
   release:
