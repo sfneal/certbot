@@ -3,37 +3,37 @@ name: Docker Build
 on: [push, pull_request]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        strategy:
-            fail-fast: false
-            matrix:
-                os: [ubuntu-latest]
-                tag: [
-                    v1,
-                    v2,
-                    v3,
-                    v4,
-                    v5,
-                    v6,
-                    v7,
-                    v8,
-                    v9,
-                    v10,
-                    v11,
-                ]
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        tag: [
+          v1,
+          v2,
+          v3,
+          v4,
+          v5,
+          v6,
+          v7,
+          v8,
+          v9,
+          v10,
+          v11,
+        ]
 
-        name: TAG-${{ matrix.tag }}
+    name: TAG-${{ matrix.tag }}
 
-        steps:
-            -   name: Checkout code
-                uses: actions/checkout@v1
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
 
-            -   name: Authenticate Docker Hub
-                run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+      - name: Authenticate Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-            -   name: Build Docker Image
-                run: sh build.sh ${{ matrix.tag }}
+      - name: Build Docker Image
+        run: sh build.sh ${{ matrix.tag }}
 
-            -   name: Show Docker Images
-                run: docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}}\t{{.Size}}'
+      - name: Show Docker Images
+        run: docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}}\t{{.Size}}'
