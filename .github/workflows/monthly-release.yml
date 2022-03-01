@@ -1,0 +1,29 @@
+name: Monthly Automated Release
+
+
+on: [push]
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get Current Date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.date.outputs.date }}
+          release_name: ${{ steps.date.outputs.date }}
+          body: |
+            - automated monthly build & dependencies upgrade
+          draft: false
+          prerelease: false
