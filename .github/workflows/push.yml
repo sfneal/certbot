@@ -1,8 +1,6 @@
 name: Docker Push
 
 on:
-  schedule:
-    - cron: '5 3 2 * *'
   release:
     types: [published]
 
