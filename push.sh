@@ -28,4 +28,5 @@ if [ "$TAG" != null ]
     docker push stephenneal/certbot:v9
     docker push stephenneal/certbot:v10
     docker push stephenneal/certbot:v11
+    docker push stephenneal/certbot:v12
 fi
