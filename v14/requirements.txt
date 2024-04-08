@@ -1,0 +1,9 @@
+certifi>=2024.2.2
+chardet>=5.2.0
+charset-normalizer>=3.3.2
+dirutility>=0.7.20
+idna>=3.6
+looptools>=1.2.4
+requests>=2.31.0
+tqdm>=4.66.2
+urllib3>=2.2.1
