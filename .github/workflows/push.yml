@@ -24,6 +24,7 @@ jobs:
           v10,
           v12,
           v13,
+          v14,
         ]
 
     name: TAG-${{ matrix.tag }}
