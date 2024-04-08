@@ -17,7 +17,7 @@ RUN apk update && apk add \
 # Install Python dependencies
 COPY ./requirements.txt ./requirements.txt
 RUN pip3 install --upgrade pip && \
-    ip3 install -r ./requirements.txt && \
+    pip3 install -r ./requirements.txt && \
     rm ./requirements.txt
 
 # Copy script files
