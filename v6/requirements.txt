@@ -5,7 +5,7 @@ chardet==3.0.4
 charset-normalizer==3.3.2
 ConfigArgParse==0.14.0
 configobj==5.0.6
-cryptography==2.7
+cryptography==42.0.4
 dirutility==0.7.20
 distro==1.4.0
 enum34==1.1.6
