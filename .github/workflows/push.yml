@@ -23,6 +23,7 @@ jobs:
           v9,
           v10,
           v12,
+          v13,
         ]
 
     name: TAG-${{ matrix.tag }}
