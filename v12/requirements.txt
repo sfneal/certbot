@@ -4,7 +4,7 @@ chardet==5.2.0
 charset-normalizer==2.0.12
 ConfigArgParse==1.5.3
 configobj==5.0.6
-cryptography==36.0.2
+cryptography==42.0.4
 dirutility==0.7.20
 distro==1.7.0
 idna==3.3
