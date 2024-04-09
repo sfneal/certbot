@@ -1,6 +1,6 @@
 certifi==2023.7.22
 cffi==1.14.6
-chardet==4.0.0
+chardet==5.2.0
 charset-normalizer==2.0.4
 ConfigArgParse==1.5.1
 configobj==5.0.6
