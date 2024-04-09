@@ -21,6 +21,6 @@ six==1.16.0
 tqdm==4.66.2
 urllib3==2.2.1
 zope.component==5.0.1
-zope.event==4.6
+zope.event==5.0
 zope.hookable==5.4
 zope.interface==5.5.2
