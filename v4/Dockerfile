@@ -1,5 +1,4 @@
 FROM certbot/certbot:v0.33.1
-
 MAINTAINER Stephen Neal <stephen@stephenneal.net>
 
 # Domain & email environment variable 
@@ -17,7 +16,8 @@ RUN apk update && apk add \
 COPY /scripts/ /scripts/
 
 # Install Python dependencies
-RUN pip3 install --upgrade pip && pip3 install -r /scripts/requirements.txt
+RUN pip3 install --upgrade pip && \
+    pip3 install -r /scripts/requirements.txt
 
 ENTRYPOINT ["bash"]
 CMD ["/scripts/entrypoint.sh"]
