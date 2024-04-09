@@ -20,7 +20,6 @@ if [ "$TAG" != null ]
     docker push stephenneal/certbot:v1
     docker push stephenneal/certbot:v2
     docker push stephenneal/certbot:v3
-    docker push stephenneal/certbot:v4
     docker push stephenneal/certbot:v5
     docker push stephenneal/certbot:v6
     docker push stephenneal/certbot:v7
