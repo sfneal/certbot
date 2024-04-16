@@ -11,7 +11,7 @@ idna==3.7
 josepy==1.8.0
 looptools==1.2.4
 parsedatetime==2.6
-pycparser==2.20
+pycparser==2.22
 pyOpenSSL==20.0.1
 pyRFC3339==1.1
 pytz==2024.1
