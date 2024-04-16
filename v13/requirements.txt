@@ -23,4 +23,4 @@ urllib3==2.2.1
 zope.component==5.0.1
 zope.event==5.0
 zope.hookable==5.4
-zope.interface==5.5.2
+zope.interface==6.3
