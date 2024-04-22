@@ -7,7 +7,7 @@ ConfigArgParse==1.7
 configobj==5.0.6
 cryptography==42.0.4
 dirutility==0.7.20
-distro==1.4.0
+distro==1.9.0
 enum34==1.1.6
 funcsigs==1.0.2
 future==0.18.3

@@ -6,7 +6,7 @@ ConfigArgParse==1.7
 configobj==5.0.6
 cryptography==42.0.4
 dirutility==0.7.20
-distro==1.6.0
+distro==1.9.0
 idna==3.7
 josepy==1.9.0
 looptools==1.2.4
