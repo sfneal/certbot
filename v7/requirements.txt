@@ -20,7 +20,7 @@ pycparser==2.19
 pyOpenSSL==19.1.0
 pyparsing==2.4.6
 pyRFC3339==1.1
-python-augeas==0.5.0
+python-augeas==1.1.0
 pytz==2024.1
 requests==2.31.0
 requests-toolbelt==1.0.0
