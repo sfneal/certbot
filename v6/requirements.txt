@@ -1,6 +1,6 @@
 asn1crypto==1.5.1
 certifi==2023.7.22
-cffi==1.12.3
+cffi==1.16.0
 chardet==5.2.0
 charset-normalizer==3.3.2
 ConfigArgParse==1.7

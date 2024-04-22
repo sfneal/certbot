@@ -1,5 +1,5 @@
 certifi==2023.7.22
-cffi==1.14.0
+cffi==1.16.0
 chardet==5.2.0
 ConfigArgParse==1.7
 configobj==5.0.6
