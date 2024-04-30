@@ -8,7 +8,7 @@ cryptography==42.0.4
 dirutility==0.7.20
 distro==1.9.0
 idna==3.7
-josepy==1.9.0
+josepy==1.14.0
 looptools==1.2.4
 parsedatetime==2.6
 pycparser==2.21

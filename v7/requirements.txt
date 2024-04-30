@@ -11,7 +11,7 @@ enum34==1.1.6
 funcsigs==1.0.2
 idna==3.7
 ipaddress==1.0.23
-josepy==1.2.0
+josepy==1.14.0
 looptools==1.2.4
 mock==5.1.0
 parsedatetime==2.5
