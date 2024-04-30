@@ -22,5 +22,5 @@ tqdm==4.66.2
 urllib3==1.26.18
 zope.component==5.0.1
 zope.event==5.0
-zope.hookable==5.1.0
+zope.hookable==6.0
 zope.interface==6.3
