@@ -17,7 +17,7 @@ mock==5.1.0
 parsedatetime==2.5
 pbr==5.4.4
 pycparser==2.21
-pyOpenSSL==19.1.0
+pyOpenSSL==24.1.0
 pyparsing==2.4.6
 pyRFC3339==1.1
 python-augeas==0.5.0
