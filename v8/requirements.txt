@@ -23,7 +23,7 @@ python-augeas==0.5.0
 pytz==2024.1
 requests==2.31.0
 requests-toolbelt==1.0.0
-six==1.15.0
+six==1.16.0
 tqdm==4.32.2
 urllib3==1.26.18
 zope.component==4.6.1
