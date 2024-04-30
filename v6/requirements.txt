@@ -13,7 +13,7 @@ funcsigs==1.0.2
 future==0.18.3
 idna==3.7
 ipaddress==1.0.22
-josepy==1.2.0
+josepy==1.14.0
 looptools==1.2.4
 mock==5.1.0
 parsedatetime==2.4
