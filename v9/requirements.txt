@@ -23,7 +23,7 @@ pytz==2024.1
 requests==2.31.0
 requests-toolbelt==1.0.0
 six==1.16.0
-tqdm==4.66.3
+tqdm==4.66.4
 urllib3==1.26.18
 zope.component==4.6.1
 zope.deferredimport==4.3.1
