@@ -17,7 +17,7 @@ parsedatetime==2.5
 pbr==5.4.5
 pycparser==2.21
 pyOpenSSL==24.1.0
-pyparsing==2.4.7
+pyparsing==3.1.2
 pyRFC3339==1.1
 python-augeas==0.5.0
 pytz==2024.1
