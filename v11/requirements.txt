@@ -18,7 +18,7 @@ pytz==2024.1
 requests==2.31.0
 requests-toolbelt==1.0.0
 six==1.16.0
-tqdm==4.66.2
+tqdm==4.66.3
 urllib3==1.26.18
 zope.component==5.0.1
 zope.event==5.0
