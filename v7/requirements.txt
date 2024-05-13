@@ -28,7 +28,7 @@ six==1.16.0
 tqdm==4.66.4
 urllib3==1.26.18
 zope.component==6.0
-zope.deferredimport==4.3.1
+zope.deferredimport==5.0
 zope.deprecation==4.4.0
 zope.event==5.0
 zope.hookable==6.0
