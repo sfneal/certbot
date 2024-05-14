@@ -1,15 +1,9 @@
-# Base PHP image tags
 ARG certbot_tag=v2.10.0
 
-# Build from base certbot/certbot image
-FROM certbot/certbot:${certbot_tag}
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+FROM certbot/certbot:${certbot_tag} as builder
 
-# Domain & email environment variable
-ENV certs_dir=/etc/letsencrypt/live
-ENV validation_domain=validation.example.com
-ENV email=example@example.com
-ENV staging=0
+# Set working directory
+WORKDIR /home/root/server
 
 # Update OS and add bash support
 RUN apk update \
@@ -25,8 +19,31 @@ RUN apk update \
 # Install Python dependencies
 COPY ./requirements.txt ./requirements.txt
 RUN pip3 install --upgrade pip \
-	&& pip3 install -r ./requirements.txt \
-	&& rm ./requirements.txt
+	&& pip3 install --target=/home/root/server/dependencies -r ./requirements.txt
+
+
+
+# Build from base certbot/certbot image
+FROM certbot/certbot:${certbot_tag}
+MAINTAINER Stephen Neal <stephen@stephenneal.net>
+
+WORKDIR /home/root/server
+
+# Domain & email environment variable
+ENV certs_dir=/etc/letsencrypt/live
+ENV validation_domain=validation.example.com
+ENV email=example@example.com
+ENV staging=0
+
+# Update OS and add bash support
+RUN apk update && apk add \
+    python3
+
+# Copy compiled builds
+COPY --from=builder	/home/root/server .
+
+# Set Python path
+ENV PYTHONPATH="${PYTHONPATH}:/home/root/server/dependencies"
 
 # Copy script files
 COPY /scripts/ /scripts/
