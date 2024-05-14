@@ -4,7 +4,7 @@ cffi==1.15.1
 chardet==5.2.0
 charset-normalizer==3.3.2
 ConfigArgParse==1.7
-configobj==5.0.6
+configobj==5.0.8
 cryptography==42.0.7
 dirutility==0.7.20
 distro==1.9.0
@@ -16,7 +16,7 @@ ipaddress==1.0.22
 josepy==1.14.0
 looptools==1.2.4
 mock==5.1.0
-parsedatetime==2.4
+parsedatetime==2.6
 pbr==5.4.2
 pycparser==2.21
 pyOpenSSL==24.1.0
@@ -30,7 +30,7 @@ six==1.16.0
 tqdm==4.66.4
 urllib3==2.0.7
 zope.component==6.0
-zope.deferredimport==4.3.1
+zope.deferredimport==5.0
 zope.deprecation==4.4.0
 zope.event==5.0
 zope.hookable==6.0
