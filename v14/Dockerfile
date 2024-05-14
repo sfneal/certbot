@@ -12,8 +12,15 @@ ENV email=example@example.com
 ENV staging=0
 
 # Update OS and add bash support
-RUN apk update && apk add \
-    python3
+RUN apk update \
+    && apk add --update --no-cache --virtual .tmp-build-deps \
+      gcc \
+      libc-dev \
+      linux-headers \
+      postgresql-dev \
+    && apk add \
+      libffi-dev \
+      python3
 
 # Install Python dependencies
 COPY ./requirements.txt ./requirements.txt
