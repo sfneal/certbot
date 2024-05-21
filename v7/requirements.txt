@@ -7,7 +7,7 @@ configobj==5.0.8
 cryptography==42.0.7
 dirutility==0.7.20
 distro==1.9.0
-enum34==1.1.6
+enum34==1.1.10
 funcsigs==1.0.2
 idna==3.7
 ipaddress==1.0.23
