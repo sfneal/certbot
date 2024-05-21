@@ -13,7 +13,7 @@ josepy==1.14.0
 looptools==1.2.4
 mock==5.1.0
 parsedatetime==2.6
-pbr==5.4.5
+pbr==6.0.0
 pycparser==2.21
 pyOpenSSL==24.1.0
 pyparsing==3.1.2
