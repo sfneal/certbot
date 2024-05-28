@@ -16,7 +16,7 @@ pyOpenSSL==24.1.0
 pyRFC3339==1.1
 pytz==2024.1
 requests==2.32.1
-setuptools==69.5.1
+setuptools==70.0.0
 six==1.16.0
 tqdm==4.66.4
 urllib3==2.2.1
