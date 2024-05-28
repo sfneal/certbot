@@ -12,7 +12,7 @@ enum34==1.1.10
 funcsigs==1.0.2
 future==1.0.0
 idna==3.7
-ipaddress==1.0.22
+ipaddress==1.0.23
 josepy==1.14.0
 looptools==1.2.4
 mock==5.1.0
