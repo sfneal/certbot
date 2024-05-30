@@ -14,7 +14,8 @@ RUN apk update \
       postgresql-dev \
     && apk add \
       libffi-dev \
-      python3
+      python3 \
+      py3-six
 
 # Install Python dependencies
 COPY ./requirements.txt ./requirements.txt
@@ -37,7 +38,8 @@ ENV staging=0
 
 # Update OS and add bash support
 RUN apk update && apk add \
-    python3
+    python3 \
+    py3-six
 
 # Copy compiled builds
 COPY --from=builder	/home/root/server .
