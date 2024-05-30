@@ -18,9 +18,11 @@ RUN apk update \
       py3-six
 
 # Install Python dependencies
-COPY ./requirements.txt ./requirements.txt
+COPY ["requirements-base.txt", "requirements.txt", "./"]
 RUN pip3 install --upgrade pip \
-	&& pip3 install --target=/home/root/server/dependencies -r ./requirements.txt
+    && pip3 install --target=/home/root/server/dependencies -r ./requirements.txt \
+    && rm ./requirements-base.txt \
+    && rm ./requirements.txt
 
 
 
