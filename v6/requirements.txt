@@ -1,6 +1,6 @@
 -r requirements-base.txt
 asn1crypto==1.5.1
-certifi==2024.2.2
+certifi==2024.6.2
 cffi==1.15.1
 chardet==5.2.0
 charset-normalizer==3.3.2
