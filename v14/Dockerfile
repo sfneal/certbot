@@ -1,4 +1,4 @@
-ARG certbot_tag=v2.10.0
+ARG certbot_tag=v2.11.0
 
 FROM certbot/certbot:${certbot_tag} as builder
 
