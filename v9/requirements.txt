@@ -1,5 +1,5 @@
 -r requirements-base.txt
-certifi==2024.6.2
+certifi==2024.7.4
 cffi==1.15.1
 chardet==5.2.0
 ConfigArgParse==1.7
