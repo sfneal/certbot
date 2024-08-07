@@ -17,6 +17,6 @@ pyRFC3339==1.1
 pytz==2024.1
 setuptools==72.1.0
 six>=1.16.0
-tqdm==4.66.4
+tqdm==4.66.5
 urllib3==2.2.2
 wheel==0.43.0
