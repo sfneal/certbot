@@ -47,6 +47,7 @@ RUN apk update && apk add \
 COPY --from=builder	/home/root/server .
 
 # Set Python path
+ARG PYTHONPATH
 ENV PYTHONPATH="${PYTHONPATH}:/home/root/server/dependencies"
 
 # Copy script files
