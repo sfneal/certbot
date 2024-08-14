@@ -1,6 +1,6 @@
 ARG certbot_tag=v1.4.0
 
-FROM certbot/certbot:${certbot_tag} as builder
+FROM certbot/certbot:${certbot_tag} AS builder
 
 # Set working directory
 WORKDIR /home/root/server
