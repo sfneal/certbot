@@ -1,14 +1,14 @@
 -r requirements-base.txt
 asn1crypto==1.5.1
 certifi==2024.7.4
-cffi==1.17.0
+cffi==1.17.0; python_version >= "3.8"
+cffi==1.15.1; python_version < "3.8"
 chardet==5.2.0
 charset-normalizer==3.3.2
 ConfigArgParse==1.7
 configobj==5.0.8
 cryptography==42.0.8
 distro==1.9.0
-enum34==1.1.6
 funcsigs==1.0.2
 future==1.0.0
 idna==3.7
