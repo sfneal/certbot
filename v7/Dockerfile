@@ -28,7 +28,7 @@ RUN pip3 install --upgrade pip \
 
 # Build from base certbot/certbot image
 FROM certbot/certbot:${certbot_tag}
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 WORKDIR /home/root/server
 
