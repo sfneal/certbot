@@ -1,6 +1,6 @@
 ARG certbot_tag=v1.4.0
 
-FROM certbot/certbot:${certbot_tag} as builder
+FROM certbot/certbot:${certbot_tag} AS builder
 
 # Set working directory
 WORKDIR /home/root/server
@@ -28,7 +28,7 @@ RUN pip3 install --upgrade pip \
 
 # Build from base certbot/certbot image
 FROM certbot/certbot:${certbot_tag}
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 WORKDIR /home/root/server
 
@@ -47,6 +47,7 @@ RUN apk update && apk add \
 COPY --from=builder	/home/root/server .
 
 # Set Python path
+ARG PYTHONPATH
 ENV PYTHONPATH="${PYTHONPATH}:/home/root/server/dependencies"
 
 # Copy script files

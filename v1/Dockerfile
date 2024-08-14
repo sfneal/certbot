@@ -1,6 +1,6 @@
 FROM certbot/certbot:v0.33.1
 
-MAINTAINER Stephen Neal <stephen@stephenneal.net>
+LABEL org.opencontainers.image.authors="stephen@stephenneal.net"
 
 # Domain & email environment variable 
 ENV domain=example.com
