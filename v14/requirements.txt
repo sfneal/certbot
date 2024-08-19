@@ -15,7 +15,7 @@ pycparser==2.21
 pyOpenSSL==24.2.1
 pyRFC3339==1.1
 pytz==2024.1
-setuptools==72.2.0
+setuptools==73.0.0
 six>=1.16.0
 tqdm==4.66.5
 urllib3==2.2.2
