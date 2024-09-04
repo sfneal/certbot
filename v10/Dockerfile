@@ -9,6 +9,7 @@ WORKDIR /home/root/server
 # Update OS and add bash support
 RUN apk update \
     && apk add --update --no-cache --virtual .tmp-build-deps \
+		curl \
 		gcc \
 		libc-dev \
 		linux-headers \
@@ -17,6 +18,10 @@ RUN apk update \
 		libffi-dev \
 		python3 \
 		py3-six
+
+# Install rust (for cyryptograhy Python package installation)
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
 
 # Install Python dependencies
 COPY ["requirements-base.txt", "requirements.txt", "./"]
