@@ -23,7 +23,7 @@ pyOpenSSL==24.2.1
 pyparsing==3.1.4
 pyRFC3339==1.1
 python-augeas==0.5.0
-pytz==2024.1
+pytz==2024.2
 requests-toolbelt==1.0.0
 six>=1.16.0
 tqdm==4.66.5
