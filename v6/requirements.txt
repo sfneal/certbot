@@ -33,7 +33,8 @@ zope.component==6.0
 zope.deferredimport==5.0
 zope.deprecation==5.0
 zope.event==5.0
-zope.hookable==7.0
+zope.hookable==6.0; python_version < "3.8"
+zope.hookable==7.0; python_version >= "3.8"
 zope.interface==6.4.post2; python_version < "3.8"
 zope.interface==7.0.3; python_version >= "3.8"
 zope.proxy==5.3
