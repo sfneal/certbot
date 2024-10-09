@@ -27,4 +27,5 @@ if [ "$TAG" != null ]
     docker build -t stephenneal/certbot:v12 "${DIR}"/v12/
     docker build -t stephenneal/certbot:v13 "${DIR}"/v13/
     docker build -t stephenneal/certbot:v14 "${DIR}"/v14/
+    docker build -t stephenneal/certbot:v15 "${DIR}"/v15/
 fi
