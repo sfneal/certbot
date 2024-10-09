@@ -1,0 +1,22 @@
+-r requirements-base.txt
+certifi==2024.8.30
+cffi==1.17.1
+chardet==5.2.0
+charset-normalizer==3.3.2
+ConfigArgParse==1.7
+configobj==5.0.9
+cryptography==43.0.1
+distro==1.9.0
+idna==3.10
+josepy==1.14.0
+looptools==1.2.4
+parsedatetime==2.6
+pycparser==2.21
+pyOpenSSL==24.2.1
+pyRFC3339==1.1
+pytz==2024.2
+setuptools==75.1.0
+six>=1.16.0
+tqdm==4.66.5
+urllib3==2.2.3
+wheel==0.44.0
