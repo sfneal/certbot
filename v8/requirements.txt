@@ -1,5 +1,5 @@
 -r requirements-base.txt
-certifi==2024.8.30
+certifi==2024.12.14
 cffi==1.17.1
 chardet==5.2.0
 charset-normalizer==3.4.0
