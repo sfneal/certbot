@@ -18,7 +18,7 @@ pbr==6.1.0
 pycparser==2.21
 pyOpenSSL==24.3.0
 pyparsing==3.1.4; python_version < "3.9"
-pyparsing==3.2.0; python_version >= "3.9"
+pyparsing==3.2.1; python_version >= "3.9"
 pyRFC3339==2.0.1
 python-augeas==0.5.0
 pytz==2024.2
