@@ -5,13 +5,19 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 # Optional TAG argument (if set, only the specified image will be built)
 TAG=${1:-null}
 
+# Optional PLATFORM argument (if none provided, both will be built)
+PLATFORM=${2:-"linux/amd64,linux/arm64"}
+
 # Check if the TAG variable is set
 if [ "$TAG" != null ]
 
   # Only build & push one image
   then
-    sh "${DIR}"/build.sh "${TAG}"
-    docker push stephenneal/certbot:"${TAG}"
+    docker buildx build \
+      	--push \
+      	-t stephenneal/certbot:"${TAG}" \
+      	--platform "${PLATFORM}" \
+      	"${DIR}"/"${TAG}"/
 
   # Build & push all images
   else
