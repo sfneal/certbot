@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]
+        platform: ["linux/amd64,linux/arm64"]
         tag: [
           v1,
           v2,
@@ -26,20 +26,23 @@ jobs:
           v15,
         ]
 
-    name: TAG-${{ matrix.tag }}
+    name: ${{ matrix.tag }} | ${{ matrix.platform }}
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install Docker buildx
+        id: buildx
+        uses: crazy-max/ghaction-docker-buildx@v1
+        with:
+          version: latest
+
       - name: Authenticate Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      - name: Build Docker Image
-        run: bash build.sh ${{ matrix.tag }}
-
       - name: Push Docker Image
-        run: bash push.sh ${{ matrix.tag }}
+        run: bash push.sh ${{ matrix.tag }} ${{ matrix.platform }}
 
       - name: Show Docker Images
         run: docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}}\t{{.Size}}'
