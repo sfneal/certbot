@@ -23,10 +23,6 @@ if [ "$TAG" != null ]
   else
     sh "${DIR}"/build.sh
 
-    docker push stephenneal/certbot:v1
-    docker push stephenneal/certbot:v2
-    docker push stephenneal/certbot:v3
-    docker push stephenneal/certbot:v6
     docker push stephenneal/certbot:v7
     docker push stephenneal/certbot:v8
     docker push stephenneal/certbot:v9
