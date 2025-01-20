@@ -29,7 +29,7 @@ urllib3==2.2.3; python_version < "3.9"
 urllib3==2.3.0; python_version >= "3.9"
 zope.component==6.0
 zope.deferredimport==5.0
-zope.deprecation==5.0
+zope.deprecation==5.1
 zope.event==5.0
 zope.hookable==7.0
 zope.interface==7.2
