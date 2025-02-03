@@ -20,7 +20,7 @@ pyparsing==3.1.4; python_version < "3.9"
 pyparsing==3.2.1; python_version >= "3.9"
 pyRFC3339==2.0.1
 python-augeas==0.5.0
-pytz==2024.2
+pytz==2025.1
 requests-toolbelt==1.0.0
 six>=1.16.0
 tqdm==4.67.1
