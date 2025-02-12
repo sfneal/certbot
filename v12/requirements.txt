@@ -8,7 +8,8 @@ configobj==5.0.9
 cryptography==43.0.3
 distro==1.9.0
 idna==3.10
-josepy==2.0.0
+josepy==1.15.0; python_version < "3.9"
+josepy==2.0.0; python_version >= "3.9"
 looptools==1.2.4
 parsedatetime==2.6
 pycparser==2.21
