@@ -10,7 +10,8 @@ distro==1.9.0
 funcsigs==1.0.2
 idna==3.10
 ipaddress==1.0.23
-josepy==1.15.0
+josepy==1.15.0; python_version < "3.9"
+josepy==2.0.0; python_version >= "3.9"
 looptools==1.2.4
 mock==5.1.0
 parsedatetime==2.6
