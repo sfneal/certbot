@@ -2,7 +2,7 @@
 certifi==2025.1.31
 cffi==1.17.1
 chardet==5.2.0
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
 ConfigArgParse==1.7
 configobj==5.0.9
 cryptography==44.0.2
