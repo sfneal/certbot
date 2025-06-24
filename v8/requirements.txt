@@ -27,7 +27,7 @@ requests-toolbelt==1.0.0
 six>=1.16.0
 tqdm==4.67.1
 urllib3==2.2.3; python_version < "3.9"
-urllib3==2.3.0; python_version >= "3.9"
+urllib3==2.5.0; python_version >= "3.9"
 zope.component==6.0
 zope.deferredimport==5.0
 zope.deprecation==5.0
