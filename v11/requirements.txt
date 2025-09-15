@@ -23,6 +23,6 @@ tqdm==4.67.1
 urllib3==2.2.3; python_version < "3.9"
 urllib3==2.5.0; python_version >= "3.9"
 zope.component==6.0
-zope.event==5.0
+zope.event==6.0
 zope.hookable==7.0
 zope.interface==7.2
